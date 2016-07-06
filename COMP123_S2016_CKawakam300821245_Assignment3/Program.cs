@@ -46,12 +46,13 @@ namespace COMP123_S2016_CKawakam300821245_Assignment4
                 dimentional.Add(sum[time]);
             }
 
-            foreach(var item in dimentional)
-            {
-              
+           
+                foreach (var item in dimentional)
+                {
+
                     Console.WriteLine("Sum" + item);
-                 
-            }
+
+                }
 
             
 
