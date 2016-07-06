@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: 6th July 2016
  * Date Modified : 6th July 2016
  * Description: This program display kind of Seats in airline
- * version 0.0.1 - initial commit
+ * version 0.0.2 - Added while loop and switch
  */
 namespace AirlineReservetionSystem
 {
@@ -28,6 +28,29 @@ namespace AirlineReservetionSystem
  */
         static void Main(string[] args)
         {
+            List<string>[]seats = new List<string>[10];
+
+            Console.WriteLine("Enter 1(First Class), 2(Economy Class),and 3(Exit)");
+            int number = int.Parse(Console.ReadLine());
+
+            int i = 0;
+            while(i<10)
+            {
+            switch(number)
+            {
+                case 1:
+                    seats[i].Add("First Class");
+                    break;
+                case 2:
+                    seats[i].Add("Economy Class");
+                    break;
+                case 3:
+                    break;
+            }//end switch
+
+                i++;
+            }//end while loop
+
         }
     }
 }
