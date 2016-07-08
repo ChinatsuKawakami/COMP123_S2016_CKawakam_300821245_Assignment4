@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: 6th July 2016
  * Date Modified : 6th July 2016
  * Description: This program display kind of Seats in airline
- * version 0.0.4 - updated to console result
+ * version 0.0.5 - updated the way to display if user enter "n" in if-else statement
  */
 namespace AirlineReservetionSystem
 {
@@ -62,6 +62,7 @@ namespace AirlineReservetionSystem
                         }
                         else if(answer == "n")
                         {
+                            Console.WriteLine("Next flight leaves in 3 hours");
                             break;
                         }
                         else
@@ -92,6 +93,7 @@ namespace AirlineReservetionSystem
                       }
                       else if(answer == "n")
                       {
+                          Console.WriteLine("Next flight leaves in 3 hours");
                           break;
                       }
                       else
