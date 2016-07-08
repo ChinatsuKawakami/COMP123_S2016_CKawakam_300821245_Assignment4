@@ -9,9 +9,9 @@ using System.Threading.Tasks;
  * Author: Chinatsu Kawakami
  * StudentID:300821245
  * Date: 6th July 2016
- * Date Modified : 6th July 2016
+ * Date Modified : 7th July 2016
  * Description: This program display the result of two dices sum and roll them 36000 times
- * version 0.0.2 - created loop to display sum of two dices
+ * version 0.0.3 - updated program of Dice Rolling Simulation
  */
 namespace COMP123_S2016_CKawakam300821245_Assignment4
 {
@@ -29,31 +29,52 @@ namespace COMP123_S2016_CKawakam300821245_Assignment4
        */
         static void Main(string[] args)
         {
-            //create object of class Randome
-            Random dice = new Random();
+            //a:create object of class Randome
 
-            
+            Random dice = new Random();
             int []sum = new int[36000];
-            
             List <int>dimentional= new List<int>();
 
+       
+
+
+  
             for(int time = 0;time<36000;time++)
             {
                 int firstDice = dice.Next(1, 7);
                 int secondDice = dice.Next(1, 7);
+                //b:calculate sum of two dices
                 sum [time]= firstDice + secondDice;
           
                 dimentional.Add(sum[time]);
             }
+            
+            for(int i = 0;i<36000;i++)
+            {
 
+                Console.Write("Time : " + (i+1));
+                Console.WriteLine(" Sum : " + sum[i]);
+            }
+
+            Console.WriteLine("Please push Enter key if you want to exit");
+            Console.ReadKey();
+
+            /*
            
                 foreach (var item in dimentional)
                 {
-
+                    int i = 1;
+          
+                    Console.Write("Time :" + i);
+                    if (i <= 36000)
+                    {
+                        i++;
+                    }
                     Console.WriteLine("Sum" + item);
+                    
 
                 }
-
+        */
             
 
         }
